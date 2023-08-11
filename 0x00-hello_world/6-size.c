@@ -11,10 +11,10 @@ int main(void)
 	long long int d;
 	float f;
 
-prinf(Size of a char: %lu byte(s)\n',(unsigned long)sizeof(a));
-prinf(Size of a int: %lu byte(s)\n',(unsigned long)sizeof(b));
-prinf(Size of a long int: %lu byte(s)\n',(unsigned long)sizeof(c));
-prinf(Size of a long long int: %lu byte(s)\n',(unsigned)sizeof(d));
-print (size of a float: %lu byte(s)\n',(unsigned long)sizeof(f);
+prinf("Size of a char: %lu byte(s)\n",(unsigned long)sizeof(a));
+prinf("Size of a int: %lu byte(s)\n",(unsigned long)sizeof(b));
+prinf("Size of a long int: %lu byte(s)\n",(unsigned long)sizeof(c));
+prinf("Size of a long long int: %lu byte(s)\n",(unsigned)sizeof(d));
+print ("size of a float: %lu byte(s)\n",(unsigned long)sizeof(f);
 return (0);
 }
