@@ -4,6 +4,7 @@
  * Return 0 (Success)
  */
 int main(void)
+   Result: 0 (Success)
 {
 	char a;
 	int b;
