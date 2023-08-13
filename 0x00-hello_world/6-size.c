@@ -1,19 +1,11 @@
 #include <stdio.h>
+#include <unistd.h>
 /**
- * main - Entry point
- * Return: 0 (Success)
+ * main - A project that prints a line to a standard error
+ * Return: 1 (Success)
  */
-int main(void)
-
-	char a;
-	int b;
-	long int c;
-	long long int d;
-	float;
-printf("Size of a char: %lu byte(s)\n",(unsigned long)sizeof(a));
-printf("Size of an int: %lu byte(s)\n",(unsigned long)sizeof(b));
-printf("Size of long int: %lu byte(s)\n",(unsigned long)sizeof(c));
-printf("Size of a long long int: %lu byte(s)\n",(unsigned long)sizeof(d));
-printf("Size of a float: %lu byte(s)\n",(unsigned long)sizeof(f));
-return (0);
+int min(void)
+{
+	fputs("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", stdout);
+	return (1);
 }
