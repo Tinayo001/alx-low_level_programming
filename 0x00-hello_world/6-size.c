@@ -1,11 +1,16 @@
-#include <stdio.h>
-#include <unistd.h>
+#include <stdio.>
+
 /**
- * main - A project that prints a line to a standard error
- * Return: 1 (Success)
+ * main - Entry point
+ * Return: 0 (Success)
  */
-int min(void)
+
+int main(void)
 {
-	fputs("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", stdout);
-	return (1);
+	printf("Size of char: %lu byte(s)", sizeof(char));
+	printf("Size of int: %lu byte(s)", sizeof(int));
+	printf("size of long int; %lu byte(s)", sizeof(long int));
+	printf("size of long long int: %lu byte(s)", sizeof(long long int));
+	printf("size of float: %lu byte(s)", sizeof(float));
+	return (0);
 }
