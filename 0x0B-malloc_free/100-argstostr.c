@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -47,7 +46,9 @@ char *argstostr(int ac, char **av)
 
 	if (concatenatedArgs != NULL)
 	{
-		printf("Concatenated Args:\n%s\n", concatenatedArgs);
-		free(concatenatedArgs);
+		for (int i = 0; concatenatedArgs[i] != '\0'; i++)
+			_putchar(concatenatedArgs[i]);
 	}
+	_putchar('\n');
+	free(concatenatedArgs);
 }
