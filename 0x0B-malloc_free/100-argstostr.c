@@ -11,25 +11,27 @@
 
 char *argstostr(int ac, char **av)
 {
+	int i;
 	int totalLength = 0;
+	int currentPosition = 0;
+	char *result;
+	char *concatenatedArgs;
 
 	if (ac == 0 || av == NULL)
 	{
 		return (NULL);
 	}
 
-	for (int i = 0; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		totalLength += strlen(av[i]) + 1;
 	}
-	char *result = (char *)malloc(totalLength + 1);
+	result = (char *)malloc(totalLength + 1);
 
 	if (result == NULL)
 	{
 		return (NULL);
 	}
-	int i;
-	int currentPosition = 0;
 
 	for (i = 0; i < ac; i++)
 	{
@@ -39,14 +41,12 @@ char *argstostr(int ac, char **av)
 		currentPosition++;
 	}
 	result[currentPosition] = '\0';
-
 	return (result);
 
-	char *concatenatedArgs = argstostr(ac, av);
-
+	concatenatedArgs = argstostr(ac, av);
 	if (concatenatedArgs != NULL)
 	{
-		for (int i = 0; concatenatedArgs[i] != '\0'; i++)
+		for (i = 0; concatenatedArgs[i] != '\0'; i++)
 			_putchar(concatenatedArgs[i]);
 	}
 	_putchar('\n');
