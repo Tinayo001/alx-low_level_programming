@@ -1,48 +1,64 @@
 #include "main.h"
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
- * string_nconcat - cancatenates two strings
- * @s1: string one
- * @s2: string two
- * @n: number of bytes to concatenate from s2
- * Return: cancatenated string
- */
+* string_nconcat - concatenates two strings
+* @n: bytes to be concatenated from s1
+* @s1: string one
+* @s2: string two
+* Return: pointer to a new allocated space memory
+*/
 
-char *string_nconcat(char *s1, char *s2, unsigned int n)
+void string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i;
-	char *arr;
-	unsigned int s1len = 0;
-	unsigned int s2len = 0;
 
-	if (s1 == NULL)
-		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
-	for (i = 0; s1[i] != '\0'; i++)
-		s1len++;
-	for (i = 0; s2[i] != '\0'; i++)
-		s2len++;
-	arr = malloc(sizeof(char) * (s1len + n) + 1);
-	if (arr == NULL)
-		return (NULL);
-	if (n >= s2len)
-	{
-		for (i = 0; s1[i] != '\0'; i++)
-			arr[i] = s1[i];
-		for (i = 0; s2[i] != '\0'; i++)
-			arr[s1len + 1] = s2[i];
-		arr[s1len + i] = '\0';
+
+	if (s1 == NULL) s1 = "";
+
+	if (s2 == NULL) s2 = "";
+
+
+	unsigned int s1_len = 0;
+
+	while (s1[s1_len] != '\0') {
+
+		_putchar(s1[s1_len]);
+
+		s1_len++;
+
 	}
-	else
-	{
-		for (i = 0; s1[i] != '\0'; i++)
-			arr[i] = s1[i];
-		for (i = 0; i < n; i++)
-			arr[s1len + 1] = s2[i];
-		arr[s1len + i] = '\0';
+
+
+	unsigned int s2_len = 0;
+
+	while (s2_len < n && s2[s2_len] != '\0') {
+
+		_putchar(s2[s2_len]);
+
+		s2_len++;
+
 	}
-	return (arr);
+
+
+	_putchar('\n');
+
 }
+
+
+int main(v)
+{
+
+	char *s1 = "Best, ";
+
+	char *s2 = "School!";
+
+	unsigned int n = 6;
+
+
+	string_nconcat(s1, s2, n);
+
+
+	return 0;
+}
+

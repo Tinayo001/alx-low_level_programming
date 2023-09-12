@@ -40,9 +40,6 @@ char *argstostr(int ac, char **av)
 		result[currentPosition] = '\n';
 		currentPosition++;
 	}
-	result[currentPosition] = '\0';
-	return (result);
-
 	concatenatedArgs = argstostr(ac, av);
 	if (concatenatedArgs != NULL)
 	{
