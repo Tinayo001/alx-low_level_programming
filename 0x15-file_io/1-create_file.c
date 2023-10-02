@@ -6,7 +6,7 @@
 /**
  * create_file - creates a file
  * @filename: name of the file to create.
- * text_content: a NULL terminated string to write to the file.
+ * @text_content: is NULL create an empty file
  * Return: 1 on success, -1 on failure
  */
 
