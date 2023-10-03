@@ -13,8 +13,6 @@ int append_text_to_file(const char *filename, char *text_content)
 {
 	FILE *file;
 
-	int result = -1;
-
 	if (filename == NULL || text_content == NULL)
 	{
 		return (-1);
@@ -23,13 +21,14 @@ int append_text_to_file(const char *filename, char *text_content)
 
 	if (file == NULL)
 	{
-		return (-1);
+		return (-2);
 	}
-	if (fprintf(file, "%s", text_content) >= 0)
+	if (fprintf(file, "%s", text_content) < 0)
 	{
-		result = 1;
+		fclose(file);
+		return (-3);
 	}
 	fclose(file);
 
-	return (result);
+	return (1);
 }
