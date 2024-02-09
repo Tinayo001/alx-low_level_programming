@@ -45,5 +45,5 @@ void print_binary(unsigned long int n)
 		}
 		divisor >>= 1;
 	}
-	_putchar('\n');
 }
+
