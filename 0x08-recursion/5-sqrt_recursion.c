@@ -1,44 +1,36 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * calculate_sqrt - helper function to calculate the square root recursively
- * @n: the number to calculate the square root of
- * @low: the lower bound of the search range
- * @high: the upper bound of the search range
- * Return: the resulting square root
+ * _helper - function that helps get the square root of a number recursively
+ * @n: the number for which the square root is to found
+ * @geuss: The current guess for the square root.
+ * return: the square root of the number if found else -1
  */
-int calculate_sqrt(int n, int low, int high)
+
+int _sqrt_helper(int n, int geuss)
 {
-    int mid = (low + high) / 2;
-    if (mid * mid == n)
-    {
-        return mid;
-    }
-    else if (mid * mid < n)
-    {
-        return calculate_sqrt(n, mid + 1, high);
-    }
-    else
-    {
-        return calculate_sqrt(n, low, mid - 1);
-    }
+	if (geuss * geuss == n)
+	{
+		return (geuss);
+	}
+	else if (geuss * geuss > n)
+	{
+		return (-1);
+	}
+	else
+	{
+		return (_sqrt_helper(n, geuss + 1));
+	}
 }
 
 /**
- * _sqrt_recursion - returns the natural square root of a number
- * @n: the number to calculate the square root of
- * Return: the resulting square root, or -1 if n is negative
+ * _sqrt_recursion - function to find square root of a number recursively
+ * @n: the number to find its square root
+ * return: the natural square root if found and -1 if not found
  */
+
 int _sqrt_recursion(int n)
 {
-    if (n < 0)
-    {
-        return -1;
-    }
-    if (n == 0 || n == 1)
-    {
-        return n;
-    }
-    return calculate_sqrt(n, 0, n);
+	return (_sqrt_helper(n, 1));
 }
-
