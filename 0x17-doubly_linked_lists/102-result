@@ -1,0 +1,9 @@
+def is_palindrome(num):
+	return str(num) == str(num)[::-1]
+largest_palindrome = 0
+
+for i in range(100, 100):
+	for j in range(i, 100):
+		product = i * j
+		if is_palindrome(product) and product > largest_palindrome:
+			largest_palindrome
